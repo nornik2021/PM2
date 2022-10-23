@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".SearchActivity"
+
+    >
+
+    <FrameLayout
+        android:id="@+id/layoutReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/layout_layout_marginLeft"
+        android:layout_marginTop="@dimen/layout_layout_marginTop"
+        android:layout_marginEnd="@dimen/layout_layout_marginRight"
+        >
+
+        <Button
+            android:id = "@+id/vectorReturn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/setting"
+            android:textAllCaps="false"
+            android:textColor="@color/black2"
+            android:textSize="@dimen/textSize"
+            app:icon="@drawable/ic_strelka"
+            app:iconGravity="textStart"
+            app:iconPadding="28dp"
+            app:iconTint="@color/black"
+            android:stateListAnimator="@null"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/darkTheme"
+        android:layout_width="381dp"
+        android:layout_height="@dimen/relative_height">
+
+        <TextView
+            android:id="@+id/ys_regular_"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height"
+            android:layout_marginStart="@dimen/TextView_mL"
+            android:layout_marginTop="@dimen/TextView_mT"
+            android:layout_marginBottom="@dimen/TextView_mB"
+            android:backgroundTint="@color/black"
+            android:gravity="top"
+            android:text="@string/dark"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="@dimen/TextView_ts">
+
+        </TextView>
+
+        <Switch
+            android:id="@+id/knobSwitch"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:visibility="visible"
+            tools:ignore="UseSwitchCompatOrMaterialXml">
+
+        </Switch>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/listsShare"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/relative_height"
+        android:layout_marginTop="0dp"
+        >
+
+        <TextView
+            android:id="@+id/ys_regular_2"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height"
+            android:layout_marginStart="@dimen/TextView_mL"
+            android:layout_marginTop="@dimen/TextView_mT"
+            android:layout_marginBottom="@dimen/TextView_mB"
+            android:gravity="top"
+            android:text="@string/share_The_App"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="@dimen/TextView_ts" />
+
+        <ImageButton
+            android:id="@+id/vectorShare"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/Button_marginLeft"
+            android:layout_marginTop="@dimen/Button_marginTop"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_galka"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/listsSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/relative_height"
+        android:layout_marginTop="0dp"
+
+        >
+
+        <ImageButton
+            android:id="@+id/vectorSupport"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/Button_marginLeft"
+            android:layout_marginTop="@dimen/Button_marginTop"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_group"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
+
+        <TextView
+            android:id="@+id/ys_regular_3"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height"
+            android:layout_marginStart="@dimen/TextView_mL"
+            android:layout_marginTop="@dimen/TextView_mT"
+            android:layout_marginBottom="@dimen/TextView_mB"
+            android:gravity="top"
+            android:text="@string/write_to_support"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="@dimen/TextView_ts">
+
+        </TextView>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/listsAgreement"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/relative_height"
+        android:layout_marginTop="0dp"
+        >
+
+        <ImageButton
+            android:id="@+id/vectorAgreement"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_marginStart="@dimen/Button_marginLeft"
+            android:layout_marginTop="@dimen/Button_marginTop"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/white"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_ygol"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
+
+        <TextView
+            android:id="@+id/ys_regular_4"
+            android:layout_width="@dimen/textView_width"
+            android:layout_height="@dimen/textView_height"
+            android:layout_marginStart="@dimen/TextView_mL"
+            android:layout_marginTop="@dimen/TextView_mT"
+            android:layout_marginBottom="@dimen/TextView_mB"
+            android:gravity="top"
+            android:text="@string/terms_of_use"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="@dimen/TextView_ts">
+
+        </TextView>
+    </FrameLayout>
+</LinearLayout>
