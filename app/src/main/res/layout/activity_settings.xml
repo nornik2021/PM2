@@ -6,89 +6,81 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".SearchActivity">
+    tools:context=".SearchActivity"
 
-    <LinearLayout
-        android:id="@+id/layout"
-        android:layout_width="@dimen/layout_layout_width"
-        android:layout_height="@dimen/layout_Layout_height"
+    >
+
+    <FrameLayout
+        android:id="@+id/layoutReturn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/layout_layout_marginLeft"
         android:layout_marginTop="@dimen/layout_layout_marginTop"
-        android:layout_marginEnd="@dimen/layout_layout_marginRight">
+        android:layout_marginEnd="@dimen/layout_layout_marginRight"
+        >
 
         <Button
-            android:id = "@+id/vector"
-            android:layout_width="0dp"
+            android:id = "@+id/vectorReturn"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:backgroundTint="@color/white"
-            android:paddingStart="64px"
-            android:paddingEnd="186px"
             android:text="@string/setting"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/black2"
             android:textSize="@dimen/textSize"
             app:icon="@drawable/ic_strelka"
             app:iconGravity="textStart"
             app:iconPadding="28dp"
-            app:iconTint="@color/black" />
+            app:iconTint="@color/black"
+            android:stateListAnimator="@null"/>
 
-    </LinearLayout>
+    </FrameLayout>
 
-    <RelativeLayout
-        android:id="@+id/lists"
-        android:layout_width="@dimen/relative_width"
-        android:layout_height="@dimen/relative_height"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="80px"
-        android:clipToOutline="true">
+    <FrameLayout
+        android:id="@+id/darkTheme"
+        android:layout_width="381dp"
+        android:layout_height="@dimen/relative_height">
 
         <TextView
             android:id="@+id/ys_regular_"
             android:layout_width="@dimen/textView_width"
             android:layout_height="@dimen/textView_height"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/TextView_mL"
+            android:layout_marginStart="@dimen/TextView_mL"
             android:layout_marginTop="@dimen/TextView_mT"
             android:layout_marginBottom="@dimen/TextView_mB"
+            android:backgroundTint="@color/black"
             android:gravity="top"
             android:text="@string/dark"
             android:textAllCaps="false"
-            android:backgroundTint="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="@dimen/TextView_ts">
 
         </TextView>
 
         <Switch
-            android:id="@+id/knob"
-            android:layout_width="match_parent"
+            android:id="@+id/knobSwitch"
+            android:layout_width="@dimen/width"
             android:layout_height="match_parent"
-            android:rotationX="-8"
+            android:layout_gravity="end"
             android:visibility="visible"
             tools:ignore="UseSwitchCompatOrMaterialXml">
 
         </Switch>
 
-    </RelativeLayout>
+    </FrameLayout>
 
-    <RelativeLayout
-        android:id="@+id/lists2"
-        android:layout_width="@dimen/relative_width"
+    <FrameLayout
+        android:id="@+id/listsShare"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/relative_height"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
-        android:clipToOutline="true">
+        >
 
         <TextView
             android:id="@+id/ys_regular_2"
             android:layout_width="@dimen/textView_width"
             android:layout_height="@dimen/textView_height"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/TextView_mL"
+            android:layout_marginStart="@dimen/TextView_mL"
             android:layout_marginTop="@dimen/TextView_mT"
             android:layout_marginBottom="@dimen/TextView_mB"
             android:gravity="top"
@@ -96,68 +88,46 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="@dimen/TextView_ts" />
 
-        <Button
-            android:id="@+id/vector2"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+        <ImageButton
+            android:id="@+id/vectorShare"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
             android:layout_marginStart="@dimen/Button_marginLeft"
             android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
+            android:src="@drawable/ic_galka"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
+    </FrameLayout>
 
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_galka"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/lists3"
-        android:layout_width="@dimen/relative_width"
+    <FrameLayout
+        android:id="@+id/listsSupport"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/relative_height"
-
         android:layout_marginTop="0dp"
 
         >
 
-        <Button
-            android:id="@+id/vector3"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+        <ImageButton
+            android:id="@+id/vectorSupport"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
             android:layout_marginStart="@dimen/Button_marginLeft"
             android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_ph"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
+            android:src="@drawable/ic_group"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
 
         <TextView
             android:id="@+id/ys_regular_3"
             android:layout_width="@dimen/textView_width"
             android:layout_height="@dimen/textView_height"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/TextView_mL"
+            android:layout_marginStart="@dimen/TextView_mL"
             android:layout_marginTop="@dimen/TextView_mT"
             android:layout_marginBottom="@dimen/TextView_mB"
             android:gravity="top"
@@ -166,47 +136,34 @@
             android:textSize="@dimen/TextView_ts">
 
         </TextView>
-    </RelativeLayout>
+    </FrameLayout>
 
-    <RelativeLayout
-        android:id="@+id/lists4"
-        android:layout_width="@dimen/relative_width"
+    <FrameLayout
+        android:id="@+id/listsAgreement"
+        android:layout_width="wrap_content"
         android:layout_height="@dimen/relative_height"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="0dp"
+        >
 
-        android:clipToOutline="true">
-
-        <Button
-            android:id="@+id/vector4"
-            android:layout_width="@dimen/Button_width"
-            android:layout_height="@dimen/Button_height"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
+        <ImageButton
+            android:id="@+id/vectorAgreement"
+            android:layout_width="@dimen/width"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
             android:layout_marginStart="@dimen/Button_marginLeft"
             android:layout_marginTop="@dimen/Button_marginTop"
-            android:layout_marginEnd="-1dp"
             android:layout_marginBottom="10dp"
             android:backgroundTint="@color/white"
-            android:shadowColor="@color/black"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textColorHighlight="@color/black"
-            android:textColorHint="@color/black"
-            android:textColorLink="@color/black"
-            app:icon="@drawable/ic_ygol"
-            app:iconGravity="textEnd"
-            app:iconTint="@color/black" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_ygol"
+            android:stateListAnimator="@null"
+            app:iconTint="@color/grey" />
 
         <TextView
             android:id="@+id/ys_regular_4"
             android:layout_width="@dimen/textView_width"
             android:layout_height="@dimen/textView_height"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="@dimen/TextView_mL"
+            android:layout_marginStart="@dimen/TextView_mL"
             android:layout_marginTop="@dimen/TextView_mT"
             android:layout_marginBottom="@dimen/TextView_mB"
             android:gravity="top"
@@ -215,6 +172,5 @@
             android:textSize="@dimen/TextView_ts">
 
         </TextView>
-    </RelativeLayout>
-
+    </FrameLayout>
 </LinearLayout>
